@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPORT CRIME — Tv Series</title>
+<meta name="description" content="The first ever sports investigative series. A true mix of procedural crime drama and visceral, real sports action. Season 1 & 2 now streaming.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<noscript>
+  <style>
+    .preloader{display:none}
+    .reveal,[data-reveal],.hero .reveal,.hero-title .line,.sec-title .line{opacity:1!important;transform:none!important}
+  </style>
+</noscript>
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-inner">
+    <div class="preloader-logo">
+      <img src="assets/img/logo.webp" alt="SPORT CRIME">
+    </div>
+    <div class="preloader-bar"><span id="preloader-fill"></span></div>
+    <div class="preloader-meta">
+      <span class="mono">CASE FILE — LOADING</span>
+      <span class="mono preloader-count" id="preloader-count">00</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ============ FILM GRAIN ============ -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <img src="assets/img/logo.webp" alt="SPORT CRIME">
+    </a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="#about"><span class="idx">01</span> ABOUT</a>
+      <a href="#cast"><span class="idx">02</span> CAST</a>
+      <a href="#band"><span class="idx">03</span> BAND</a>
+      <a href="#gallery"><span class="idx">04</span> STILLS</a>
+      <a href="#contact"><span class="idx">05</span> CONTACT</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#watch" class="btn btn-line">WATCH NOW</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-links mono">
+    <a href="#about"><span class="idx">01</span>ABOUT</a>
+    <a href="#cast"><span class="idx">02</span>CAST</a>
+    <a href="#band"><span class="idx">03</span>BAND</a>
+    <a href="#gallery"><span class="idx">04</span>STILLS</a>
+    <a href="#contact"><span class="idx">05</span>CONTACT</a>
+  </div>
+  <div class="mobile-menu-social">
+    <a href="https://www.instagram.com/sportcrimetheseries/" target="_blank" rel="noopener">INSTAGRAM</a>
+    <a href="https://www.youtube.com/@SPORTCRIME" target="_blank" rel="noopener">YOUTUBE</a>
+    <a href="https://open.spotify.com/intl-it/artist/4hguC11rrNrZGgrfo323rp" target="_blank" rel="noopener">SPOTIFY</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <video class="hero-video" id="heroVideo" poster="assets/img/bannerone.jpg" muted loop playsinline preload="metadata">
+    <source src="assets/video/s1-trailer.webm" type="video/webm">
+  </video>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-scrim"></div>
+
+  <div class="hero-content">
+    <div class="hero-topline mono reveal">
+      <span class="tag">A BLULLOW PRODUCTION</span>
+      <span class="tagline-mark">&#10070;</span>
+      <span class="tag">THE FIRST EVER SPORTS INVESTIGATIVE SERIES</span>
+    </div>
+
+    <div class="hero-live mono reveal">
+      <span class="live-dot"></span> SEASON 2 — OUT NOW
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line reveal"><em>WHERE SPORT</em></span>
+      <span class="line reveal"><em>ENDS</em><span class="hero-red">,</span> THE CRIME</span>
+      <span class="line reveal">BEGINS<span class="hero-red">.</span></span>
+    </h1>
+
+    <div class="hero-sub reveal">
+      <p>A true mix of procedural crime drama and visceral, real sports action — filled with edgy music, psychology and humour.</p>
+    </div>
+
+    <div class="hero-actions reveal">
+      <a href="#watch" class="btn btn-red">WATCH THE SERIES <span class="btn-arrow">&#8594;</span></a>
+      <button class="btn btn-ghost btn-play" id="playTeaser">
+        <span class="play-ico">&#9654;</span> PLAY S2 TEASER
+      </button>
+    </div>
+
+    <div class="hero-seasons mono reveal">
+      <div class="season">
+        <span class="season-num">S1</span>
+        <span class="season-detail">6 &times; 47&prime;</span>
+        <span class="season-dot"></span>
+        <span class="season-status">OUT NOW</span>
+      </div>
+      <div class="season">
+        <span class="season-num">S2</span>
+        <span class="season-detail">6 &times; 60&prime;</span>
+        <span class="season-dot"></span>
+        <span class="season-status">OUT NOW</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-social mono reveal">
+    <a href="https://www.instagram.com/sportcrimetheseries/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+    <a href="https://www.facebook.com/SPORTCRIMETVSERIES" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+    <a href="https://www.youtube.com/@SPORTCRIME" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+    <a href="https://open.spotify.com/intl-it/artist/4hguC11rrNrZGgrfo323rp" target="_blank" rel="noopener" aria-label="Spotify">SP</a>
+    <a href="https://www.imdb.com/title/tt5774730/" target="_blank" rel="noopener" aria-label="IMDb">IMDb</a>
+    <span class="hero-social-line"></span>
+  </div>
+
+  <div class="hero-side-label mono">SEAMS SPORTS AGENCY &#8226; LUGANO &#8226; EST. 2022</div>
+
+  <a href="#about" class="scroll-cue mono" aria-label="Scroll down">
+    <span>SCROLL</span>
+    <span class="scroll-line"><i></i></span>
+  </a>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>SEASON 1 — NOW STREAMING</span><b>&#10070;</b>
+    <span>SEASON 2 — OUT NOW</span><b>&#10070;</b>
+    <span>THE SEAMERS ARE IN</span><b>&#10070;</b>
+    <span>EVERY SPORT HAS A DARK SIDE</span><b>&#10070;</b>
+    <span>SEASON 1 — NOW STREAMING</span><b>&#10070;</b>
+    <span>SEASON 2 — OUT NOW</span><b>&#10070;</b>
+    <span>THE SEAMERS ARE IN</span><b>&#10070;</b>
+    <span>EVERY SPORT HAS A DARK SIDE</span><b>&#10070;</b>
+  </div>
+</div>
+
+<!-- ============ MANIFESTO / ABOUT ============ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label mono reveal"><span class="sec-no">01</span> THE PREMISE</div>
+      <h2 class="sec-title reveal">
+        <span class="line"><em>THE FIRST-EVER</em></span>
+        <span class="line">SPORTS INVESTIGATIVE <span class="red">SERIES</span></span>
+      </h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="lead reveal">Former anchorwoman <strong>Daniela Goblin</strong> and rugby player &amp; analyst <strong>Luka &ldquo;Dabs&rdquo; Kriv</strong> found SEAMS — a sports agency that quickly gets entangled in cases far beyond the surface of the game.</p>
+        <p class="reveal">Dabs&rsquo;s unique perception and sensitivity to sleuthing is crucial, and often pushes him to the edge. While the other &ldquo;seamers&rdquo; start to gel, Dabs has to deal with quirky, scary and conflictual relationships inside and outside the Agency. The death of an old teammate triggers a journey into the past.</p>
+        <div class="about-meta mono reveal">
+          <div><span>SEAMS</span> SPORTS AGENCY</div>
+          <div><span>SET</span> LUGANO, TICINO</div>
+          <div><span>GENRE</span> CRIME / DRAMA / SPORT</div>
+        </div>
+      </div>
+
+      <div class="about-media reveal">
+        <div class="frame-corners">
+          <div class="video-wrap" id="aboutVideoWrap">
+            <div class="video-poster" id="aboutVideoPoster">
+              <img class="video-poster-img" src="assets/img/teaser-poster.jpg" alt="Sport Crime — Season 2 official teaser preview" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/HraQbdxQXHs/maxresdefault.jpg';">
+              <span class="mono">SEASON 2 — OFFICIAL TEASER</span>
+              <button class="big-play" id="aboutPlay" aria-label="Play teaser">&#9654;</button>
+            </div>
+          </div>
+        </div>
+        <p class="video-cap mono">01 — THE DEEP END — 01:52</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAST ============ -->
+<section class="cast" id="cast">
+  <div class="cast-bg" style="background-image:url('assets/img/gallery/9.jpg')"></div>
+  <div class="cast-overlay"></div>
+
+  <div class="container">
+    <div class="sec-head sec-head-row">
+      <div class="sec-label mono reveal"><span class="sec-no">02</span> THE TEAM</div>
+      <div class="sec-title-right reveal">
+        <h2 class="sec-title"><span class="line">THE <span class="red">SEAMERS</span></span></h2>
+        <p class="mono sec-subtitle reveal">FIVE AGENTS. ZERO INNOCENTS.</p>
+      </div>
+      <div class="cast-nav" aria-hidden="true">
+        <button class="cast-nav-btn mono" id="castPrev" aria-label="Previous agent">&#8592;</button>
+        <button class="cast-nav-btn mono" id="castNext" aria-label="Next agent">&#8594;</button>
+      </div>
+    </div>
+
+    <div class="cast-scroller" id="castScroller">
+      <!-- LUKA -->
+      <article class="cast-card" data-reveal>
+        <div class="card-num mono">01</div>
+        <div class="card-photo">
+          <img src="assets/img/cast/Dabs.webp" alt="Portrait of Luka Dabs Kriv">
+        </div>
+        <div class="card-body">
+          <span class="card-role mono">THE ANALYST</span>
+          <h3>LUKA &ldquo;DABS&rdquo; KRIV</h3>
+          <span class="actor">Luca Tramontin</span>
+          <p>Team sports analyst and trainer. Athletic, shamanic, multilingual, well-read — a rebellious giant with a sharp tongue and a deeper mind.</p>
+          <a class="imdb mono" href="https://www.imdb.com/name/nm8116465/" target="_blank" rel="noopener">
+            <span class="imdb-ico">IMDb</span> DABS&rsquo; PROFILE &#8599;
+          </a>
+        </div>
+      </article>
+
+      <!-- DANIELA -->
+      <article class="cast-card" data-reveal>
+        <div class="card-num mono">02</div>
+        <div class="card-photo">
+          <img src="assets/img/cast/Dani.webp" alt="Portrait of Daniela Goblin">
+        </div>
+        <div class="card-body">
+          <span class="card-role mono">THE BOSS</span>
+          <h3>DANIELA GOBLIN</h3>
+          <span class="actor">Daniela Scalia</span>
+          <p>Former sports journalist and anchorwoman. Elegant but discreet, nurturing and motherly — the rational side of the Agency. She&rsquo;s the boss, but a very relaxed one.</p>
+          <a class="imdb mono" href="https://www.imdb.com/name/nm8116464/" target="_blank" rel="noopener">
+            <span class="imdb-ico">IMDb</span> DANIELA&rsquo;S PROFILE &#8599;
+          </a>
+        </div>
+      </article>
+
+      <!-- LAURA -->
+      <article class="cast-card" data-reveal>
+        <div class="card-num mono">03</div>
+        <div class="card-photo">
+          <img src="assets/img/cast/LL.webp" alt="Portrait of Laura Bonini Killer">
+        </div>
+        <div class="card-body">
+          <span class="card-role mono">THE LAWYER</span>
+          <h3>LAURA BONINI KILLER</h3>
+          <span class="actor">Elettra Mallaby</span>
+          <p>The blond, thin, high-classy she-lawyer, expert of passports and contracts. A social climber and a swot — honest and loyal, and the butt of every agency joke.</p>
+          <a class="imdb mono" href="https://www.imdb.com/name/nm4262305/" target="_blank" rel="noopener">
+            <span class="imdb-ico">IMDb</span> LAURA&rsquo;S PROFILE &#8599;
+          </a>
+        </div>
+      </article>
+
+      <!-- JADEN -->
+      <article class="cast-card" data-reveal>
+        <div class="card-num mono">04</div>
+        <div class="card-photo">
+          <img src="assets/img/cast/JADEN.webp" alt="Portrait of Jaden Botende">
+        </div>
+        <div class="card-body">
+          <span class="card-role mono">THE TECH</span>
+          <h3>JADEN BOTENDE</h3>
+          <span class="actor">Toussaint Mavakala</span>
+          <p>Technician of sport-related software. A fashionable &ldquo;Trap-Black&rdquo; with permanent ear-phones. A bit naive — the perfect foil for the ever-jesting Dabs.</p>
+          <a class="imdb mono" href="https://www.imdb.com/name/nm8116462/" target="_blank" rel="noopener">
+            <span class="imdb-ico">IMDb</span> JADEN&rsquo;S PROFILE &#8599;
+          </a>
+        </div>
+      </article>
+
+      <!-- JASMINE -->
+      <article class="cast-card" data-reveal>
+        <div class="card-num mono">05</div>
+        <div class="card-photo">
+          <img src="assets/img/cast/Jas2-1.webp" alt="Portrait of Jasmine Saidi">
+        </div>
+        <div class="card-body">
+          <span class="card-role mono">THE SECRETARY</span>
+          <h3>JASMINE SAIDI</h3>
+          <span class="actor">Nabila Jaziri</span>
+          <p>SEAMS&rsquo; secretary. Quiet, accurate, caring, happy of her Arabic descent and life in general. A keen dancer and former cheerleading athlete with hidden depth.</p>
+          <a class="imdb mono" href="https://www.imdb.com/name/nm11805582/" target="_blank" rel="noopener">
+            <span class="imdb-ico">IMDb</span> JASMINE&rsquo;S PROFILE &#8599;
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <div class="cast-hint mono">DRAG / SCROLL &#8594;</div>
+  </div>
+</section>
+
+<!-- ============ WATCH ============ -->
+<section class="watch" id="watch">
+  <div class="container">
+    <div class="sec-label mono reveal"><span class="sec-no">03</span> WATCH IT</div>
+    <h2 class="sec-title reveal"><span class="line">CHOOSE YOUR</span> <span class="line red">SIDE<span class="red">.</span></span></h2>
+
+    <div class="platforms reveal">
+      <div class="platform">
+        <div class="platform-logo"><img src="assets/img/platforms/logo-prime.png" alt="Prime Video"></div>
+        <div class="platform-links mono">
+          <a href="https://www.amazon.com/gp/video/detail/B0CGJ19618/ref=atv_dp_share_cu_r" target="_blank" rel="noopener">US &#8599;</a>
+          <a href="https://www.amazon.co.uk/gp/video/detail/B0CGJ9518N/ref=atv_dp_share_cu_r" target="_blank" rel="noopener">UK &#8599;</a>
+        </div>
+      </div>
+      <div class="platform">
+        <div class="platform-logo"><img src="assets/img/platforms/chili2_w.png" alt="Chili"></div>
+        <div class="platform-links mono">
+          <a href="https://it.chili.com/content/sport-crime-2025/224b970f-38f0-485b-a640-550b9fda9d7e" target="_blank" rel="noopener">ITA &#8599;</a>
+          <a href="https://de.chili.com/content/sport-crime-2022/77d5bb76-717b-49bc-9098-d2e3b49ad696" target="_blank" rel="noopener">DE &#8599;</a>
+          <a href="https://at.chili.com/content/sport-crime-2022/77d5bb76-717b-49bc-9098-d2e3b49ad696" target="_blank" rel="noopener">AT &#8599;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BAND ============ -->
+<section class="band" id="band">
+  <div class="band-noise" aria-hidden="true"></div>
+  <div class="container">
+    <div class="band-grid">
+      <div class="band-left">
+        <div class="sec-label mono reveal"><span class="sec-no">04</span> THE SOUNDTRACK</div>
+        <h2 class="sec-title reveal">
+          <span class="line">THE SOUND</span>
+          <span class="line">OF THE <span class="red">CRIME</span></span>
+        </h2>
+        <p class="reveal">Experience the power of Sport Crime through the electrifying sounds of <strong>Xpensive Legs</strong>. The band has just released their brand-new album <em>Kantrida</em> — hard rock fused with epic sports stories.</p>
+        <div class="album mono reveal"><span>ALBUM</span> KANTRIDA &mdash; OUT NOW</div>
+        <a href="https://xl.sportcrime.com/" target="_blank" rel="noopener" class="btn btn-red reveal">DISCOVER THE BAND <span class="btn-arrow">&#8594;</span></a>
+      </div>
+      <div class="band-right reveal">
+        <div class="spotify-frame">
+          <iframe src="https://open.spotify.com/embed/artist/2PtSKEcwAAzTCGWu7a4SG6" width="100%" height="380" loading="lazy" style="border-radius:12px" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen title="Xpensive Legs on Spotify"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="sec-head sec-head-row">
+      <div class="sec-label mono reveal"><span class="sec-no">05</span> ON SET</div>
+      <h2 class="sec-title reveal"><span class="line">FRAMES FROM</span> <span class="line red">THE CASE</span></h2>
+    </div>
+  </div>
+
+  <div class="gallery-scroller" id="galleryScroller">
+    <figure class="g-item"><span class="g-index mono">01</span><img src="assets/img/gallery/10.jpg" alt="Sport Crime still 01" loading="lazy"></figure>
+    <figure class="g-item"><span class="g-index mono">02</span><img src="assets/img/gallery/9.jpg" alt="Sport Crime still 02" loading="lazy"></figure>
+    <figure class="g-item g-item-tall"><span class="g-index mono">03</span><img src="assets/img/gallery/13.jpg" alt="Sport Crime still 03" loading="lazy"></figure>
+    <figure class="g-item"><span class="g-index mono">04</span><img src="assets/img/gallery/7.jpg" alt="Sport Crime still 04" loading="lazy"></figure>
+    <figure class="g-item"><span class="g-index mono">05</span><img src="assets/img/gallery/4.jpg" alt="Sport Crime still 05" loading="lazy"></figure>
+    <figure class="g-item g-item-tall"><span class="g-index mono">06</span><img src="assets/img/gallery/14.jpg" alt="Sport Crime still 06" loading="lazy"></figure>
+    <figure class="g-item"><span class="g-index mono">07</span><img src="assets/img/gallery/11.jpg" alt="Sport Crime still 07" loading="lazy"></figure>
+    <figure class="g-item"><span class="g-index mono">08</span><img src="assets/img/gallery/8.jpg" alt="Sport Crime still 08" loading="lazy"></figure>
+  </div>
+
+  <div class="gallery-foot container mono">
+    <span id="galleryCount">01 / 08</span>
+    <span class="gallery-progress"><i id="galleryBar"></i></span>
+    <span class="mono">DRAG / SCROLL &#8594;</span>
+  </div>
+</section>
+
+<!-- ============ HASHTAG / INSTAGRAM ============ -->
+<section class="hashtag">
+  <a href="https://www.instagram.com/sportcrimetheseries/" target="_blank" rel="noopener" class="hashtag-link">
+    <h2 class="hashtag-title" id="hashtagTitle">#DO<span class="red">IT</span>SPORTCRIMELY</h2>
+    <span class="hashtag-sub mono">FOLLOW THE SEAMERS ON INSTAGRAM &#8599;</span>
+  </a>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="sec-label mono reveal"><span class="sec-no">06</span> CONTACT</div>
+        <h2 class="sec-title reveal">
+          <span class="line">TALK TO</span>
+          <span class="line">THE <span class="red">AGENCY</span></span>
+        </h2>
+        <p class="reveal">Fan mail, pitches, banter — all welcome, any language. But if you&rsquo;re here on business, do us a favour: watch at least two episodes first.</p>
+        <a href="mailto:blullow@blullow.com" class="email-big reveal">BLULLOW@BLULLOW.COM <span class="btn-arrow">&#8599;</span></a>
+      </div>
+
+      <div class="contact-right reveal">
+        <div class="prod-card">
+          <div class="prod-logo">
+            <img src="assets/img/logo.webp" alt="SPORT CRIME">
+          </div>
+          <div class="prod-name mono">A TV SERIES BY</div>
+          <div class="prod-co mono">BLULLOW SA <span class="amp">&amp;</span> KEYMOTIONS SRL</div>
+          <div class="prod-line"></div>
+          <button class="disclaimer-btn mono" id="disclaimerBtn">CONTACTS &amp; PROFESSIONAL NOTICE &#8594;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-social">
+    <a href="https://www.instagram.com/sportcrimetheseries/" target="_blank" rel="noopener">INSTAGRAM</a>
+    <a href="https://www.facebook.com/SPORTCRIMETVSERIES" target="_blank" rel="noopener">FACEBOOK</a>
+    <a href="https://www.youtube.com/@SPORTCRIME" target="_blank" rel="noopener">YOUTUBE</a>
+    <a href="https://open.spotify.com/intl-it/artist/4hguC11rrNrZGgrfo323rp" target="_blank" rel="noopener">SPOTIFY</a>
+    <a href="https://www.imdb.com/title/tt5774730/" target="_blank" rel="noopener">IMDB</a>
+  </div>
+  <div class="footer-logo">
+    <img src="assets/img/logo.webp" alt="SPORT CRIME">
+  </div>
+  <div class="footer-bottom mono">
+    <span>&copy; 2026 SPORT CRIME. ALL RIGHTS RESERVED.</span>
+    <a href="#hero" class="to-top">BACK TO TOP &#8593;</a>
+  </div>
+</footer>
+
+<!-- ============ VIDEO LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-inner">
+    <button class="lightbox-close mono" id="lightboxClose" aria-label="Close">CLOSE &#10005;</button>
+    <div class="lightbox-frame">
+      <video id="lightboxVideo" controls playsinline preload="none" poster="assets/img/teaser-poster.jpg">
+        <source src="assets/video/teaser-s2-lite.webm" type="video/webm">
+      </video>
+    </div>
+    <div class="lightbox-foot mono">
+      <span>SPORT CRIME — SEASON 2 · OFFICIAL TEASER</span>
+      <a href="https://www.youtube.com/watch?v=HraQbdxQXHs" target="_blank" rel="noopener">WATCH ON YOUTUBE &#8599;</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DISCLAIMER MODAL ============ -->
+<div class="lightbox disclaimer" id="disclaimer" aria-hidden="true">
+  <div class="lightbox-inner">
+    <button class="lightbox-close mono" data-close-disclaimer aria-label="Close">CLOSE &#10005;</button>
+    <div class="disclaimer-body">
+      <h3 class="mono">CONTACTS &amp; PROFESSIONAL NOTICE</h3>
+      <p>If you write to us for pleasure, you are welcome — any language, any banter, any critic.</p>
+      <p>If you write to us for work, please note we do not accept meetings or enquiries if you haven&rsquo;t seen <strong>at least 2 episodes</strong>.</p>
+      <hr>
+      <h3 class="mono">CONTATTI E AVVISO PROFESSIONALE</h3>
+      <p>Se ci scrivi per la serie, le musiche o per qualsiasi altro motivo, benvenuto/a — qualsiasi lingua e linguaggio.</p>
+      <p>Se ci scrivi per motivi professionali (proposte, idee, luoghi, soprattutto candidature): non farlo senza avere visto <strong>almeno 2 episodi</strong>. Per esperienza sappiamo che perderemo tempo e incontreremo imbarazzi.</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
