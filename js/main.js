@@ -204,29 +204,39 @@
 
   /* ---------------- DRAG SCROLLERS ---------------- */
   function makeDraggable(scroller) {
-    let down = false, startX = 0, startScroll = 0, moved = 0;
+    let down = false, dragging = false, startX = 0, startScroll = 0, moved = 0;
     scroller.addEventListener('pointerdown', e => {
+      if (e.button !== 0) return;
       down = true;
+      dragging = false;
       moved = 0;
       startX = e.clientX;
       startScroll = scroller.scrollLeft;
-      scroller.classList.add('dragging');
-      scroller.setPointerCapture(e.pointerId);
     });
-    scroller.addEventListener('pointermove', e => {
+    const move = e => {
       if (!down) return;
       const dx = e.clientX - startX;
-      moved = Math.max(moved, Math.abs(dx));
-      scroller.scrollLeft = startScroll - dx;
-    });
+      if (!dragging && Math.abs(dx) > 5) {
+        dragging = true;
+        moved = Math.abs(dx);
+        try { scroller.setPointerCapture(e.pointerId); } catch (_) {}
+      }
+      if (dragging) {
+        moved = Math.max(moved, Math.abs(dx));
+        scroller.scrollLeft = startScroll - dx;
+        scroller.classList.add('dragging');
+      }
+    };
     const end = () => {
       down = false;
+      dragging = false;
       scroller.classList.remove('dragging');
     };
-    scroller.addEventListener('pointerup', end);
-    scroller.addEventListener('pointercancel', end);
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', end);
+    window.addEventListener('pointercancel', end);
     scroller.addEventListener('click', e => {
-      if (moved > 6) e.preventDefault();
+      if (moved > 6) { e.preventDefault(); e.stopPropagation(); }
     }, true);
   }
   const castScroller = $('#castScroller');
