@@ -220,6 +220,12 @@ body.has-ring .cursor-ring{width:64px;height:64px;border-color:var(--red)}
 .hero-title em{font-style:normal;color:transparent;-webkit-text-stroke:2px var(--ink)}
 .hero-red{color:var(--red);-webkit-text-stroke:0}
 
+.hero-tagline{
+  margin-top:1.5rem;font-size:13px;letter-spacing:.4em;color:#eaeae4;
+  text-transform:uppercase;text-shadow:0 2px 16px rgba(0,0,0,.85);
+}
+.hero-tagline .red{color:var(--red)}
+
 .hero-sub{
   max-width:520px;margin:2.2rem 0 2.6rem;
   color:#eaeae4;font-size:1.08rem;text-shadow:0 2px 18px rgba(0,0,0,.9);
@@ -276,12 +282,13 @@ body.has-ring .cursor-ring{width:64px;height:64px;border-color:var(--red)}
 #hero .hero-live{transition-delay:.42s}
 #hero .hero-title .line:nth-child(1){transition-delay:.58s}
 #hero .hero-title .line:nth-child(2){transition-delay:.73s}
-#hero .hero-sub{transition-delay:.92s}
-#hero .hero-actions{transition-delay:1.06s}
-#hero .hero-seasons{transition-delay:1.2s}
-#hero .hero-social{transition-delay:1.4s}
-#hero .hero-side-label{transition-delay:1.4s}
-#hero .scroll-cue{transition-delay:1.6s}
+#hero .hero-tagline{transition-delay:.88s}
+#hero .hero-sub{transition-delay:1.02s}
+#hero .hero-actions{transition-delay:1.16s}
+#hero .hero-seasons{transition-delay:1.3s}
+#hero .hero-social{transition-delay:1.5s}
+#hero .hero-side-label{transition-delay:1.5s}
+#hero .scroll-cue{transition-delay:1.7s}
 
 /* ============ TICKER ============ */
 .ticker{
@@ -519,11 +526,18 @@ body.has-ring .cursor-ring{width:64px;height:64px;border-color:var(--red)}
 }
 .hashtag-sub{display:inline-block;margin-top:1.6rem;font-size:11px;color:var(--muted)}
 .hashtag-social{
-  display:flex;justify-content:center;align-items:center;gap:1.7rem;
-  margin-top:2.2rem;font-size:11px;letter-spacing:.22em;
+  display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;
+  margin-top:2.6rem;
 }
-.hashtag-social a{color:var(--muted);transition:color .3s}
-.hashtag-social a:hover{color:var(--red)}
+.social-btn{
+  display:inline-flex;align-items:center;gap:.75rem;
+  border:1px solid var(--line-2);background:rgba(255,255,255,.03);
+  padding:.95rem 1.6rem;color:var(--ink);
+  transition:border-color .3s,color .3s,background .3s,transform .35s var(--ease);
+}
+.social-btn:hover{border-color:var(--red);background:rgba(250,10,10,.09);color:var(--red);transform:translateY(-3px)}
+.soc-ico{width:21px;height:21px;flex:none}
+.soc-label{font-size:11px;letter-spacing:.24em}
 
 /* ============ CONTACT ============ */
 .contact{padding:8rem 0;background:var(--bg-2);border-top:1px solid var(--line)}
@@ -546,6 +560,12 @@ body.has-ring .cursor-ring{width:64px;height:64px;border-color:var(--red)}
 .prod-name{font-size:9.5px;color:var(--dim);letter-spacing:.3em}
 .prod-co{font-size:12px;color:var(--ink);margin:.6rem 0 1.6rem;letter-spacing:.08em}
 .prod-co .amp{color:var(--red)}
+.prod-dist{
+  display:inline-block;font-size:11px;color:var(--muted);letter-spacing:.14em;
+  margin:0 0 1.6rem;transition:color .3s;
+}
+.prod-dist .amp{color:var(--red)}
+.prod-dist:hover{color:var(--red)}
 .prod-line{height:1px;background:var(--line);margin-bottom:1.6rem}
 .disclaimer-btn{font-size:10px;color:var(--red);letter-spacing:.2em;transition:color .3s}
 .disclaimer-btn:hover{color:#fff}
@@ -618,7 +638,8 @@ body.has-ring .cursor-ring{width:64px;height:64px;border-color:var(--red)}
   .hero-seasons{gap:1.6rem}
   .footer-bottom{justify-content:center}
   .email-big{word-break:break-all}
-  .hashtag-social{gap:1.05rem;flex-wrap:wrap;padding-inline:1rem}
+  .hashtag-social{gap:.7rem;padding-inline:1rem}
+  .social-btn{padding:.85rem 1.15rem;gap:.6rem}
 }
 
 /* ============ REDUCED MOTION ============ */
