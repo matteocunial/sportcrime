@@ -118,7 +118,7 @@ body.has-ring .cursor-ring{width:64px;height:64px;border-color:var(--red)}
   display:flex;align-items:center;gap:2rem;
 }
 .nav-logo{flex:0 0 auto}
-.nav-logo img{height:40px;width:auto}
+.nav-logo img{height:56px;width:auto}
 .nav-links{display:flex;gap:1.9rem;margin-left:auto}
 .nav-links a{font-size:11px;color:var(--muted);display:flex;gap:.5rem;align-items:baseline;transition:color .3s;position:relative;padding:.3rem 0}
 .nav-links a .idx{font-size:9px;color:var(--red)}
